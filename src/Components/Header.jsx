@@ -3,7 +3,7 @@ import Menu from "./Menu";
 
 function Header() {
   return (
-    <header className="fixed flex w-full bg-red-200">
+    <header className="fixed flex w-full bg-forest-700">
       <div className="mx-auto flex h-16 w-[1200px] items-center justify-between">
         <Logo />
         <Menu />

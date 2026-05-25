@@ -5,6 +5,7 @@ import Treatments from "./pages/Treatments";
 import Contact from "./pages/Contact";
 import Consultation from "./pages/Consultation";
 import AppLayout from "./ui/AppLayout";
+import Blog from "./pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Homepage /> },
       { path: "/doctor", element: <Doctor /> },
       { path: "/treatments", element: <Treatments /> },
+      { path: "/blog", element: <Blog /> },
       { path: "/contact", element: <Contact /> },
       { path: "/consultation", element: <Consultation /> },
     ],
