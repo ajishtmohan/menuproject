@@ -1,0 +1,15 @@
+import Logo from "./Logo";
+import Menu from "./Menu";
+
+function Header() {
+  return (
+    <header className="fixed flex w-full bg-red-200">
+      <div className="mx-auto flex h-16 w-[1200px] items-center justify-between">
+        <Logo />
+        <Menu />
+      </div>
+    </header>
+  );
+}
+
+export default Header;
