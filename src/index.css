@@ -38,6 +38,10 @@
   --color-cream-400: oklch(0.777 0.113 83.6);
 }
 
+.section {
+  padding: 5rem 0;
+}
+
 /*
 :root {
   --text: #6b6375;
