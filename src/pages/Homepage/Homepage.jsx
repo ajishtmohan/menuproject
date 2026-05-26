@@ -1,7 +1,7 @@
-import AboutDoctor from "../Components/AboutDoctor";
+import AboutDoctor from './AboutDoctor';
 
-import Hero from "../Components/Hero";
-import FormConsultation from "../ui/FormConsultation";
+import Hero from './Hero';
+import FormConsultation from '../../ui/FormConsultation';
 
 function Homepage() {
   return (

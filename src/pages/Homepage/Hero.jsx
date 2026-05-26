@@ -7,7 +7,7 @@ function Hero() {
     <div className='w-full bg-earth-50 border-b-2 border-forest-400 box-border '>
       <div className='flex h-screen items-center gap-12 w-300 mx-auto'>
         <div className='block w-full'>
-          <p className='text-xl tracking-wider uppercase text-forest-600 pb-3 pl-1'>
+          <p className='text-xl tracking-wider uppercase text-forest-600 pb-3 pl-1 font-secondary'>
             Doctor led ayurveda
           </p>
           <h1 className='mb-4 '>
@@ -15,18 +15,18 @@ function Hero() {
               Real Healing.
             </span>
             <br />
-            <span className='text-forest-600 font-heading text-7xl leading-12'>
+            <span className='text-forest-600 font-heading text-7xl leading-20'>
               Rooted in you.
             </span>
           </h1>
-          <p className='pl-1 text-xl w-100 mb-5 text-earth-600'>
+          <p className='pl-1 text-xl w-100 mb-3 text-earth-600 font-secondary'>
             Personalised diagnosis and treatments for skin, stress, sleep, and
             chronic conditions.
           </p>
-          <p className='pl-1 text-xl mb-5 font-semibold text-forest-500'>
+          <p className='pl-1 text-xl mb-8 font-semibold text-forest-500 font-secondary'>
             Beyond relaxation. Focused on lasting healing.
           </p>
-          <div className='flex gap-6 text-l mb-10'>
+          <div className='flex gap-6 text-l mb-8'>
             <Link
               to='./consultation'
               className='flex items-center gap-2 rounded-full bg-forest-600 px-5 py-3 text-white'
