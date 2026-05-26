@@ -4,7 +4,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 
 function Hero() {
   return (
-    <div className='w-full bg-earth-50 border-b-2 border-forest-400 box-border '>
+    <section className='w-full bg-earth-50 border-b-2 border-forest-400 box-border '>
       <div className='flex h-screen items-center gap-12 w-300 mx-auto'>
         <div className='block w-full'>
           <p className='text-xl tracking-wider uppercase text-forest-600 pb-3 pl-1 font-secondary'>
@@ -28,7 +28,7 @@ function Hero() {
           </p>
           <div className='flex gap-6 text-l mb-8'>
             <Link
-              to='./consultation'
+              to='/consultation'
               className='flex items-center gap-2 rounded-full bg-forest-600 px-5 py-3 text-white'
             >
               <span className='text-xl'>
@@ -64,7 +64,7 @@ function Hero() {
           <img src='/public/assets/img/consultation.webp' />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
