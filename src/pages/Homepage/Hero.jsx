@@ -61,7 +61,7 @@ function Hero() {
           </div>
         </div>
         <div className='block w-full overflow-hidden rounded-2xl bg-red-300 h-[50%] flex items-center'>
-          <img src='/dist/assets/img/consultation.webp' />
+          <img src='/public/assets/img/consultation.webp' />
         </div>
       </div>
     </div>
