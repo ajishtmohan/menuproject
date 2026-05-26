@@ -60,8 +60,8 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className='block w-full overflow-hidden rounded-2xl bg-red-300 h-[50%]'>
-          <img src='../../public/img/consultation.webp' />
+        <div className='block w-full overflow-hidden rounded-2xl bg-red-300 h-[50%] flex items-center'>
+          <img src='/public/img/consultation.webp' />
         </div>
       </div>
     </div>
