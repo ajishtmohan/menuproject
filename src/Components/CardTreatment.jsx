@@ -32,5 +32,5 @@ function CardTreatment({ treatment }) {
     </div>
   );
 }
-
+// this is a text
 export default CardTreatment;
