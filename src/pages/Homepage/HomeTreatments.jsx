@@ -23,7 +23,6 @@ function HomeTreatments() {
       await fetchTreatments();
     }
     loadTreatments();
-    console.log(treatments);
   }, []);
 
   return (

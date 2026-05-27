@@ -7,10 +7,12 @@ import Contact from './pages/Contact';
 import Consultation from './pages/Consultation';
 import AppLayout from './ui/AppLayout';
 import Blog from './pages/Blog';
+import Error from './Components/Error';
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       { path: '/', element: <Homepage /> },
       { path: '/doctor', element: <Doctor /> },
