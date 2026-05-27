@@ -5,26 +5,17 @@ import { supabase } from '../../lib/supabase';
 
 function HomeTreatments() {
   const [treatments, setTreatments] = useState([]);
-  //   useEffect(function () {
-  //     async function getTreatment() {
-  //       const res = await fetch('http://localhost:3800/homeTreatments');
-  //       console.log(res);
-  //       const data = await res.json();
-  //       setTreatments(data);
-  //       console.log(data);
-  //     }
-  //     getTreatment();
-  //   }, []);
 
   async function fetchTreatments() {
-    const { data, error } = await supabase.from('treatments').select('*');
-
-    if (error) {
-      console.log(error);
-      return;
+    try {
+      const res = await supabase.from('treatments').select('*');
+      const data = res.data;
+      setTreatments(data);
+    } catch (error) {
+      return new Error(error);
     }
 
-    setTreatments(data);
+    setTreatments;
   }
 
   useEffect(() => {
