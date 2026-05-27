@@ -48,7 +48,7 @@ function Doctor() {
             </div>
           </div>
           <div className='w-160 rounded-xl overflow-hidden'>
-            <img src='/public/assets/img/drnalini2.png' />
+            <img src='/assets/img/drnalini2.png' />
           </div>
         </div>
       </div>

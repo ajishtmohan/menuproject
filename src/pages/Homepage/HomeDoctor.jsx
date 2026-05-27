@@ -7,7 +7,7 @@ function AboutDoctor() {
       <div className='w-300 mx-auto'>
         <div className='flex gap-12 items-center'>
           <div className='w-full overflow-hidden rounded-2xl'>
-            <img src='/public/assets/img/drnalini2.png' />
+            <img src='/assets/img/drnalini2.png' />
           </div>
           <div className='w-full'>
             <div className='block w-full'>
