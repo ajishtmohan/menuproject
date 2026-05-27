@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Homepage from './pages/Homepage/Homepage';
 import Doctor from './pages/Doctor';
 import Treatments from './pages/Treatments';
+import Treatment from './pages/Treatment';
 import Contact from './pages/Contact';
 import Consultation from './pages/Consultation';
 import AppLayout from './ui/AppLayout';
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: '/', element: <Homepage /> },
       { path: '/doctor', element: <Doctor /> },
       { path: '/treatments', element: <Treatments /> },
+      { path: '/treatments/:treatment', element: <Treatment /> },
       { path: '/blog', element: <Blog /> },
       { path: '/contact', element: <Contact /> },
       { path: '/consultation', element: <Consultation /> },
