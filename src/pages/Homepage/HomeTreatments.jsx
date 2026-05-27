@@ -1,18 +1,38 @@
 import { Link } from 'react-router-dom';
 import CardTreatment from '../../Components/CardTreatment';
 import { useEffect, useState } from 'react';
+import { supabase } from '../../lib/supabase';
 
 function HomeTreatments() {
   const [treatments, setTreatments] = useState([]);
-  useEffect(function () {
-    async function getTreatment() {
-      const res = await fetch('http://localhost:3800/homeTreatments');
-      console.log(res);
-      const data = await res.json();
-      setTreatments(data);
-      console.log(data);
+  //   useEffect(function () {
+  //     async function getTreatment() {
+  //       const res = await fetch('http://localhost:3800/homeTreatments');
+  //       console.log(res);
+  //       const data = await res.json();
+  //       setTreatments(data);
+  //       console.log(data);
+  //     }
+  //     getTreatment();
+  //   }, []);
+
+  async function fetchTreatments() {
+    const { data, error } = await supabase.from('treatments').select('*');
+
+    if (error) {
+      console.log(error);
+      return;
     }
-    getTreatment();
+
+    setTreatments(data);
+  }
+
+  useEffect(() => {
+    async function loadTreatments() {
+      await fetchTreatments();
+    }
+    loadTreatments();
+    console.log(treatments);
   }, []);
 
   return (
@@ -36,9 +56,9 @@ function HomeTreatments() {
           </Link>
         </div>
       </div>
-      <div className='flex w-300 mx-auto gap-6'>
+      <div className='flex w-300 mx-auto gap-12'>
         {treatments.map((treatment) => (
-          <CardTreatment treatment={treatment} key={treatment.treatId} />
+          <CardTreatment treatment={treatment} key={treatment.id} />
         ))}
       </div>
     </section>

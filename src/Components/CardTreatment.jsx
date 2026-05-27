@@ -11,7 +11,7 @@ function CardTreatment({ treatment }) {
           <img
             src={`/assets/img/${treatment.treatImg}`}
             alt={treatment.treatName}
-            className='w-auto '
+            className='w-full object-cover abosolute top-0'
           />
         </div>
       </div>
@@ -19,8 +19,7 @@ function CardTreatment({ treatment }) {
         {treatment.treatName}
       </h1>
       <p className='font-secondary text-earth-500 mb-5'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur enim,
-        quaerat iste reiciendis atque sed tempora.
+        {treatment.treatBlurb}
       </p>
       <div className='flex justify-center'>
         <Link

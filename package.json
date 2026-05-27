@@ -11,6 +11,7 @@
     "server": "json-server -w data/data.json --port 3800"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
     "@tailwindcss/vite": "^4.3.0",
     "json-server": "^1.0.0-beta.15",
     "react": "^19.2.6",

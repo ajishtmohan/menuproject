@@ -3,7 +3,7 @@
     {
       "treatId": "1",
       "treatName": "Nasya",
-      "treatBlurb": "Nasya is an Ayurvedic therapy in which medicated oils, herbal juices, or powders are administered through the nose to cleanse and nourish the head, neck, and respiratory passages.",
+      "treatBlurb": "Nasya is an Ayurvedic therapy in which medicated oils or herbal juices are administered through the nose to cleanse the head, neck, and respiratory passages.",
       "treatLink": "nasya",
       "treatImg": "nasya.png",
       "treatDuration": "30"
