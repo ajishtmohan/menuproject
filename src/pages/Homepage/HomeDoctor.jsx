@@ -11,11 +11,11 @@ function AboutDoctor() {
           </div>
           <div className='w-full'>
             <div className='block w-full'>
-              <p className='text-l tracking-wider uppercase text-forest-600 pb-3 pl-1'>
+              <p className='text-l tracking-wider uppercase text-earth-600 pb-3 pl-1'>
                 meet your healer
               </p>
-              <h1 className='mb-4 '>
-                <span className='text-forest-600 font-heading text-6xl leading-12'>
+              <h1 className='mb-2 '>
+                <span className='text-forest-600 font-heading text-5xl leading-12'>
                   Dr. Nalini Marath
                 </span>
               </h1>
