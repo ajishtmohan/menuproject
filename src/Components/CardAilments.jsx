@@ -10,11 +10,12 @@ function CardAilments() {
         Stress Management plans
       </p>
       <p className='font-secondary text-sm mb-3 text-forest-600'>
-        Ayurveda offers a natural approach to stress management by restoring
-        balance to the mind and body through personalized therapies, herbal
-        remedies, and lifestyle practices. Experience calmness, better sleep,
-        and renewed energy with holistic Ayurvedic care designed for today’s
-        stressful lifestyle.
+        Corporate Stress Relief through Ayurveda focuses on restoring balance to
+        the mind and body affected by long working hours, mental pressure, and
+        digital fatigue. Personalized therapies, relaxation techniques, and
+        holistic treatments help improve focus, reduce anxiety, enhance sleep
+        quality, and bring lasting mental calm for a healthier work-life
+        balance.
       </p>
       <div className='flex gap-3 text-xs items-center'>
         <p className='bg-earth-50 px-4 py-1.5 rounded-full text-earth-500'>

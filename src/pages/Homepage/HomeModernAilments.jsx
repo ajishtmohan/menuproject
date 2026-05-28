@@ -35,8 +35,9 @@ function HomeModernAilments() {
             </span>
             <br />
             <span className='text-forest-600 font-heading text-5xl'>
-              Ancient Therapies
-              <br /> for Modern Ailments
+              Reviving Balance with
+              <br />
+              Ancient Ayurvedic Therapies
             </span>
           </h1>
           <Link
