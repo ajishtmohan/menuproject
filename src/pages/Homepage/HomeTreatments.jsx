@@ -31,11 +31,11 @@ function HomeTreatments() {
         <div className='flex justify-between items-end'>
           <h1>
             <span className='tracking-wider uppercase text-earth-500'>
-              Timetested treatments
+              what we offer
             </span>
             <br />
             <span className='text-forest-600 font-heading text-5xl'>
-              The Natural Healing
+              Ancient Therapies for Modern Ailments
             </span>
           </h1>
           <Link

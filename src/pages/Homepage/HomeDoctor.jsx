@@ -6,8 +6,8 @@ function AboutDoctor() {
     <section className='w-full bg-forest-50 py-25'>
       <div className='w-300 mx-auto'>
         <div className='flex gap-12 items-center'>
-          <div className='w-full overflow-hidden rounded-2xl'>
-            <img src='/assets/img/drnalini2.png' />
+          <div className='w-full overflow-hidden rounded-2xl h-90 relative'>
+            <img src='/assets/img/drnalini2.png' className='absolute -top-9' />
           </div>
           <div className='w-full'>
             <div className='block w-full'>
@@ -24,7 +24,7 @@ function AboutDoctor() {
                 healer's role is to remove the obstacles and awaken the body's
                 innate intelligence".
               </p>
-              <p className='pl-1 text-xl mb-5 font-semibold text-forest-500'>
+              <p className='pl-1 text-xl mb-5 font-semibold text-forest-500 font-secondary'>
                 Beyond relaxation. Focused on lasting healing.
               </p>
               <div className='flex gap-6 text-l mb-10'>
