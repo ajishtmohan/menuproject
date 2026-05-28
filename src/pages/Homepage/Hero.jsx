@@ -7,15 +7,15 @@ function Hero() {
     <section className='w-full bg-earth-50 border-b-2 border-forest-400 box-border '>
       <div className='flex h-screen items-center gap-12 w-300 mx-auto'>
         <div className='block w-full'>
-          <p className='text-xl tracking-wider uppercase text-forest-600 pb-3 pl-1 font-secondary'>
+          <p className='tracking-wider uppercase text-earth-600 px-5 py-1 mb-4 rounded-full bg-white border text-m border-amber-200 font-body inline-block'>
             Doctor led ayurveda
           </p>
           <h1 className='mb-4 '>
-            <span className='text-earth-600 font-heading text-7xl'>
+            <span className='text-earth-600 font-heading text-6xl'>
               Real Healing.
             </span>
             <br />
-            <span className='text-forest-600 font-heading text-7xl leading-20'>
+            <span className='text-forest-600 font-heading text-6xl leading-16'>
               Rooted in you.
             </span>
           </h1>
