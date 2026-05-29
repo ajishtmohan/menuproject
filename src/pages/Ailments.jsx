@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
+import CardAilments from '../Components/CardAilments';
 import { useEffect, useState } from 'react';
-import CardAilments from '../../Components/CardAilments';
-import { fetchAilments } from '../../services/supabseServices';
+import { fetchAilments } from '../services/supabseServices';
 
-function HomeModernAilments() {
+function Ailments() {
   const [ailments, setAilments] = useState([]);
 
   useEffect(() => {
-    async function loadTreatments() {
+    async function loadAilments() {
       const data = await fetchAilments();
       setAilments(data);
     }
-    loadTreatments();
+    loadAilments();
   }, []);
-
   return (
     <section className='section bg-earth-50'>
       <div className='w-300 mx-auto mb-10'>
@@ -37,12 +36,6 @@ function HomeModernAilments() {
               balance and thrive.
             </p>
           </div>
-          <Link
-            to='./treatments'
-            className='flex items-center gap-2 rounded-full bg-white px-5 py-3 uppercase text-earth-500 border border-earth-500'
-          >
-            See all treatments &rarr;
-          </Link>
         </div>
       </div>
       <div className='flex w-300 mx-auto gap-6 flex-wrap'>
@@ -54,4 +47,4 @@ function HomeModernAilments() {
   );
 }
 
-export default HomeModernAilments;
+export default Ailments;

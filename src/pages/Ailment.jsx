@@ -21,6 +21,7 @@ function Ailment() {
   );
 
   const paras = ailment?.ailContent?.split('\n') || [];
+  const benefits = ailment.ailBenefit?.split(',') || [];
 
   return (
     <section className='pt-16'>
@@ -83,20 +84,19 @@ function Ailment() {
           </div>
           <div className='w-160 flex-col'>
             <div className='bg-white border border-earth-200 rounded-2xl px-5 py-3 mb-6'>
-              <h1 className='font-heading text-xl text-forest-600'>
-                Panchakarma Expert
+              <h1 className='font-body uppercase font-semibold text-forest-600 mb-2'>
+                Benefits
               </h1>
-              <p className='font-secondary text-earth-600'>
-                Expertise in Panchakarma
-              </p>
-            </div>
-            <div className='bg-white border border-earth-200 rounded-2xl px-5 py-3 mb-6'>
-              <h1 className='font-heading text-xl text-forest-600'>
-                Dosha Analysis
-              </h1>
-              <p className='font-secondary text-earth-600'>
-                Expertise in Panchakarma
-              </p>
+              <ul className='list-disc pl-5 text-sm'>
+                {benefits.map((benefit) => (
+                  <li
+                    className='font-secondary text-earth-600 mb-1'
+                    key={benefits.indexOf(benefit)}
+                  >
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
