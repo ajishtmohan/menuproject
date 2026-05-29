@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import CardTreatment from '../../Components/CardTreatment';
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import CardAilments from '../../Components/CardAilments';

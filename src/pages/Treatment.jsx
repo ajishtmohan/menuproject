@@ -4,7 +4,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { fetchTreatment } from '../services/supabseServices';
 
-function Doctor() {
+function Treatment() {
   const [treatment, setTreatment] = useState('');
   const params = useParams();
   const treatmentName = params.treatment;
@@ -123,4 +123,4 @@ function Doctor() {
   );
 }
 
-export default Doctor;
+export default Treatment;

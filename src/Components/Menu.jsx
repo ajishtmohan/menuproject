@@ -4,9 +4,10 @@ const menuLinks = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'Dr. Nalini', to: '/doctor' },
   { id: 3, name: 'Treatments', to: '/treatments' },
-  { id: 4, name: 'Blog', to: '/blog' },
-  { id: 5, name: 'contact', to: '/contact' },
-  { id: 6, name: 'Book Now', to: 'consultation' },
+  { id: 4, name: 'Ailments', to: '/ailments' },
+  { id: 5, name: 'Blog', to: '/blog' },
+  { id: 6, name: 'contact', to: '/contact' },
+  { id: 7, name: 'Book Now', to: 'consultation' },
 ];
 
 function Menu() {

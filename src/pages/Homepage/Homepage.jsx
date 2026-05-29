@@ -4,7 +4,7 @@ import FormConsultation from '../../ui/FormConsultation';
 import HomeWhyChooseUs from './HomeWhyChooseUs';
 import HomeTestimonials from './HomeTestimonials';
 import HomeJourney from './HomeJourney';
-import HomeModernAilments from './HomeModernAilments';
+import HomeAilments from './HomeAilments';
 
 function Homepage() {
   return (
@@ -12,7 +12,7 @@ function Homepage() {
       <Hero />
       <HomeJourney />
       <HomeDoctor />
-      <HomeModernAilments />
+      <HomeAilments />
       <HomeWhyChooseUs />
       <HomeTestimonials />
       <FormConsultation />
