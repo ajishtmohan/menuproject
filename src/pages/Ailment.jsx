@@ -2,26 +2,25 @@ import { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
-import { fetchTreatment } from '../services/supabseServices';
+import { fetchAilment } from '../services/supabseServices';
 
-function Treatment() {
-  const [treatment, setTreatment] = useState('');
+function Ailment() {
+  const [ailment, setAilment] = useState('');
   const params = useParams();
-  const treatmentName = params.treatment;
+  const ailmentName = params.ailment;
 
   useEffect(
     function () {
       async function fetchData() {
-        const data = await fetchTreatment(treatmentName);
-        await setTreatment(data);
+        const [data] = await fetchAilment(ailmentName);
+        setAilment(data);
       }
       fetchData();
-      return function () {
-        setTreatment('');
-      };
     },
-    [params.treatment],
+    [ailmentName],
   );
+
+  const paras = ailment?.ailContent?.split('\n') || [];
 
   return (
     <section className='pt-16'>
@@ -34,11 +33,11 @@ function Treatment() {
               </p>
               <h1 className='mb-4 '>
                 <span className='text-earth-100 font-heading text-6xl leading-12 capitalize'>
-                  {treatment.treatName}
+                  {ailment.ailName}
                 </span>
               </h1>
               <p className='pl-1 text-l mb-5 text-earth-200 font-secondary '>
-                {treatment.treatBlurb}
+                {ailment.ailBlurb}
               </p>
               <p className='pl-1 text-xl mb-5  text-forest-200 font-secondary'>
                 Beyond relaxation. Focused on lasting healing.
@@ -66,38 +65,21 @@ function Treatment() {
             </div>
           </div>
           <div className='w-160 rounded-xl overflow-hidden'>
-            <img src={`/assets/img/${treatment.treatImg}`} />
+            <img src={`/assets/img/${ailment.ailImage}.png`} />
           </div>
         </div>
       </div>
       <div className='bg-amber-50'>
         <div className='w-300 mx-auto py-16 flex gap-12 justify-between'>
           <div className='w-full'>
-            <p className='font-secondary mb-6 text-earth-600'>
-              Dr. Nalini completed her Bachelor of Ayurvedic Medicine and
-              Surgery (BAMS) degree in 2011 and has since been committed to
-              providing authentic Ayurvedic healthcare with a patient-centered
-              approach. She has worked with several leading Ayurvedic hospitals,
-              gaining extensive clinical experience in diagnosing and treating a
-              wide range of health conditions through traditional Ayurvedic
-              principles.
-            </p>
-            <p className='font-secondary mb-6 text-earth-600'>
-              With a deep understanding and expertise in Panchakarma treatments,
-              Dr. Nalini focuses on restoring balance and promoting natural
-              healing through personalized therapies. Her strong knowledge of
-              dosha assessment enables her to identify the root cause of
-              ailments accurately and provide treatments tailored to each
-              individual’s body constitution and health condition.
-            </p>
-            <p className='font-secondary mb-6 text-earth-600'>
-              Dr. Nalini believes in the philosophy of “minimal Ayurvedic
-              medicines with maximum healing,” emphasizing effective treatment
-              through precise diagnosis, lifestyle correction, diet management,
-              and carefully planned therapies. Her holistic approach aims not
-              only to relieve symptoms but also to improve overall well-being
-              and long-term health naturally.
-            </p>
+            {paras.map((para) => (
+              <p
+                className='font-secondary mb-6 text-earth-600'
+                key={paras.indexOf(para)}
+              >
+                {para}
+              </p>
+            ))}
           </div>
           <div className='w-160 flex-col'>
             <div className='bg-white border border-earth-200 rounded-2xl px-5 py-3 mb-6'>
@@ -123,4 +105,4 @@ function Treatment() {
   );
 }
 
-export default Treatment;
+export default Ailment;

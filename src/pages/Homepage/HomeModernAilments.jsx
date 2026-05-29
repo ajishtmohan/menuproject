@@ -1,26 +1,15 @@
 import { Link } from 'react-router-dom';
-import CardTreatment from '../../Components/CardTreatment';
 import { useEffect, useState } from 'react';
-import { supabase } from '../../lib/supabase';
 import CardAilments from '../../Components/CardAilments';
+import { fetchAilments } from '../../services/supabseServices';
 
 function HomeModernAilments() {
-  const [treatments, setTreatments] = useState([]);
-
-  async function fetchTreatments() {
-    try {
-      const res = await supabase.from('treatments').select('*');
-      const data = res.data;
-      setTreatments(data);
-    } catch (error) {
-      return new Error(error);
-    }
-    setTreatments;
-  }
+  const [ailments, setAilments] = useState([]);
 
   useEffect(() => {
     async function loadTreatments() {
-      await fetchTreatments();
+      const data = await fetchAilments();
+      setAilments(data);
     }
     loadTreatments();
   }, []);
@@ -28,28 +17,37 @@ function HomeModernAilments() {
   return (
     <section className='section bg-earth-50'>
       <div className='w-300 mx-auto mb-10'>
-        <div className='flex justify-between items-end'>
-          <h1>
-            <span className='tracking-wider uppercase text-earth-500'>
-              what we offer
-            </span>
-            <br />
-            <span className='text-forest-600 font-heading text-5xl'>
-              Ancient Therapies
-              <br /> for Modern Ailments
-            </span>
-          </h1>
+        <div className='flex justify-between items-start'>
+          <div className='w-160'>
+            <h1 className='pb-2'>
+              <span className='tracking-wider uppercase text-earth-500'>
+                what we offer
+              </span>
+              <br />
+              <span className='text-forest-600 font-heading text-5xl'>
+                Natural Solutions for
+                <br />
+                Today's Lifestyle Disorders
+              </span>
+            </h1>
+            <p className='font-secondary text-earth-500'>
+              From stress and insomnia to digestive issues and chronic pain,
+              modern work habits can impact every aspect of well-being. Ayurveda
+              offers holistic, root-cause-focused care to help you restore
+              balance and thrive.
+            </p>
+          </div>
           <Link
             to='./treatments'
             className='flex items-center gap-2 rounded-full bg-white px-5 py-3 uppercase text-earth-500 border border-earth-500'
           >
-            See all treatments
+            See all treatments &rarr;
           </Link>
         </div>
       </div>
-      <div className='flex w-300 mx-auto gap-12'>
-        {treatments.map((treatment) => (
-          <CardAilments treatment={treatment} key={treatment.treatName} />
+      <div className='flex w-300 mx-auto gap-6 flex-wrap'>
+        {ailments.map((ailment) => (
+          <CardAilments ailment={ailment} key={ailment.id} />
         ))}
       </div>
     </section>

@@ -8,6 +8,7 @@ import Consultation from './pages/Consultation';
 import AppLayout from './ui/AppLayout';
 import Blog from './pages/Blog';
 import Error from './Components/Error';
+import Ailment from './pages/Ailment';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: '/doctor', element: <Doctor /> },
       { path: '/treatments', element: <Treatments /> },
       { path: '/treatments/:treatment', element: <Treatment /> },
+      { path: '/ailments/:ailment', element: <Ailment /> },
       { path: '/blog', element: <Blog /> },
       { path: '/contact', element: <Contact /> },
       { path: '/consultation', element: <Consultation /> },
