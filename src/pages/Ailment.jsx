@@ -4,7 +4,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { fetchAilment } from '../services/supabseServices';
 
-function Ailment() {
+function AilmentHome() {
   const [ailment, setAilment] = useState('');
   const params = useParams();
   const ailmentName = params.ailment;
@@ -105,4 +105,4 @@ function Ailment() {
   );
 }
 
-export default Ailment;
+export default AilmentHome;

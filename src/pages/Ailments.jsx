@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import CardAilments from '../Components/CardAilments';
 import { useEffect, useState } from 'react';
 import { fetchAilments } from '../services/supabseServices';
@@ -13,6 +12,7 @@ function Ailments() {
     }
     loadAilments();
   }, []);
+  console.log(ailments);
   return (
     <section className='section bg-earth-50'>
       <div className='w-300 mx-auto mb-10'>

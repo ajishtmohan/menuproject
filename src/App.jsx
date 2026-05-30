@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Consultation from './pages/Consultation';
 import AppLayout from './ui/AppLayout';
 import Blog from './pages/Blog';
-import Error from './Components/Error';
+import Error from './pages/Error';
 import Ailment from './pages/Ailment';
 import Ailments from './pages/Ailments';
 
@@ -16,15 +16,27 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Homepage /> },
-      { path: '/doctor', element: <Doctor /> },
-      { path: '/treatments', element: <Treatments /> },
-      { path: '/treatments/:treatment', element: <Treatment /> },
-      { path: '/ailments', element: <Ailments /> },
-      { path: '/ailments/:ailment', element: <Ailment /> },
-      { path: '/blog', element: <Blog /> },
-      { path: '/contact', element: <Contact /> },
-      { path: '/consultation', element: <Consultation /> },
+      { path: '/', element: <Homepage />, errorElement: <Error /> },
+      { path: '/doctor', element: <Doctor />, errorElement: <Error /> },
+      { path: '/treatments', element: <Treatments />, errorElement: <Error /> },
+      {
+        path: '/treatments/:treatment',
+        element: <Treatment />,
+        errorElement: <Error />,
+      },
+      { path: '/ailments', element: <Ailments />, errorElement: <Error /> },
+      {
+        path: '/ailments/:ailment',
+        element: <Ailment />,
+        errorElement: <Error />,
+      },
+      { path: '/blog', element: <Blog />, errorElement: <Error /> },
+      { path: '/contact', element: <Contact />, errorElement: <Error /> },
+      {
+        path: '/consultation',
+        element: <Consultation />,
+        errorElement: <Error />,
+      },
     ],
   },
 ]);
