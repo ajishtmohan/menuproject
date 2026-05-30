@@ -19,10 +19,7 @@ function Error() {
               </button>
             </div>
             <div className='w-full'>
-              <img
-                className='w-80 text-right'
-                src='/public/assets/img/vessels.png'
-              />
+              <img className='w-80 text-right' src='/assets/img/vessels.png' />
             </div>
           </div>
         </div>
